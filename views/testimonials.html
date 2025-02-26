@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Comments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+      <h2 class="text-2xl font-bold mb-4">Leave a Comment</h2>
+      <input
+        id="nameInput"
+        type="text"
+        class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 mb-2"
+        placeholder="Enter your name..."
+      />
+      <textarea
+        id="commentInput"
+        class="w-full p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+        placeholder="Write your comment..."
+      ></textarea>
+      <button
+        onclick="submitComment()"
+        class="mt-2 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600"
+      >
+        Submit
+      </button>
+
+      <h3 class="text-xl font-semibold mt-6">Reviews</h3>
+      <ul id="commentList" class="mt-4 space-y-4"></ul>
+    </div>
+
+    <script>
+      async function submitComment() {
+    const name = document.getElementById("nameInput").value.trim();
+    const comment = document.getElementById("commentInput").value.trim();
+
+    if (name === "" || comment === "") {
+        alert("Please enter your name and comment!");
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("name", name);
+    formData.append("comment", comment);
+
+    try {
+        const response = await fetch("../controller/add_comment.php", {
+            method: "POST",
+            body: formData,
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const result = await response.json();
+
+        if (result.success) {
+            document.getElementById("nameInput").value = "";
+            document.getElementById("commentInput").value = "";
+          
+            alert("Comment submitted successfully!");
+            window.location.reload();
+        } else {
+            alert("Error: " + (result.error || "Unknown error"));
+        }
+    } catch (error) {
+        // console.error("Error submitting comment:", error);
+        // alert("An error occurred while submitting your comment. Please try again later.");
+    }
+}
+
+
+async function loadComments() {
+    try {
+         await fetch('../controller/fetch_comments.php')
+        .then(response => response.json())
+        .then(data => {
+            data.map(comment => {
+                const li = document.createElement("li");
+                li.className = "bg-gray-100 p-4 rounded-lg";
+                li.innerHTML = `
+                    <h4 class="font-semibold">${comment.name}</h4>
+                    <p>${comment.comment}</p>
+                `;
+                document.getElementById("commentList").appendChild(li);
+            });
+             
+        })
+    } catch (error) {
+        console.error("Error fetching comments:", error);
+    }
+}
+
+
+
+      window.onload = loadComments;
+    </script>
+  </body>
+</html>
