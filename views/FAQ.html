@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Business Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <header class="text-gray-900 body-font bg-white shadow-md py-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1 class="text-3xl font-bold text-blue-600">Our Services</h1>
+            <nav>
+                <a href="home.html" class="text-blue-500 hover:underline text-lg font-semibold">Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-4xl mx-auto px-5 mt-10">
+        <h2 class="text-3xl font-bold text-center text-gray-900">Frequently Asked Questions</h2>
+        <p class="text-center text-gray-600 mt-2">Your queries answered about our web & app development services.</p>
+
+        <div class="mt-8 space-y-4">
+            
+            <!-- FAQ 1 -->
+            <div class="border rounded-lg bg-white shadow-md">
+                <button class="flex justify-between w-full px-6 py-4 text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+                    What services do you offer?
+                    <span class="text-indigo-500">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-gray-700">
+                    We provide a wide range of services including website and mobile app development, UI/UX design, custom software solutions, e-commerce development, and API integrations. Our team also specializes in maintaining and optimizing existing applications to ensure high performance.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="border rounded-lg bg-white shadow-md">
+                <button class="flex justify-between w-full px-6 py-4 text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+                    How long does it take to develop a website or app?
+                    <span class="text-indigo-500">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-gray-700">
+                    The development timeline depends on the complexity of the project. A simple website can take around 2-4 weeks, while a custom e-commerce or dynamic web app may take 4-8 weeks. Mobile applications usually take between 1 to 3 months, depending on the features and platform requirements (Android, iOS, or both). We always provide a detailed timeline after understanding your specific needs.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="border rounded-lg bg-white shadow-md">
+                <button class="flex justify-between w-full px-6 py-4 text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+                    Do you provide post-launch support?
+                    <span class="text-indigo-500">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-gray-700">
+                    Yes, we offer ongoing maintenance and support services to ensure that your website or app runs smoothly after launch. Our support includes bug fixing, performance optimization, security updates, and feature enhancements based on user feedback. We also provide flexible support packages tailored to your business needs.
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="border rounded-lg bg-white shadow-md">
+                <button class="flex justify-between w-full px-6 py-4 text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+                    What technologies do you use?
+                    <span class="text-indigo-500">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-gray-700">
+                    We use a variety of modern technologies to build high-quality solutions. For web development, we use HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, PHP, and Laravel. For backend development, we work with Node.js, Express.js, and databases like MySQL and MongoDB. For mobile applications, we specialize in React Native and Flutter. We choose the best tech stack based on your project’s requirements.
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="border rounded-lg bg-white shadow-md">
+                <button class="flex justify-between w-full px-6 py-4 text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+                    How much does a project cost?
+                    <span class="text-indigo-500">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-gray-700">
+                    The cost of a project depends on multiple factors, including complexity, design, features, and development time. A simple business website may cost anywhere between $500 to $3000, while a custom e-commerce site or mobile app can range from $5000 to $25000 or more. We provide a free consultation and quote based on your budget and requirements.
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="border rounded-lg bg-white shadow-md">
+                <button class="flex justify-between w-full px-6 py-4 text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+                    Can you redesign my existing website?
+                    <span class="text-indigo-500">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-gray-700">
+                    Absolutely! We specialize in website redesign and revamp services. Whether you need a complete UI/UX overhaul or just want to improve speed and responsiveness, we can modernize your website to align with the latest design trends and technology standards.
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="border rounded-lg bg-white shadow-md">
+                <button class="flex justify-between w-full px-6 py-4 text-lg font-medium text-gray-900 focus:outline-none faq-toggle">
+                    Do you offer SEO and digital marketing services?
+                    <span class="text-indigo-500">+</span>
+                </button>
+                <div class="hidden px-6 py-4 text-gray-700">
+                    Yes, we offer SEO optimization and digital marketing services to help your business rank higher in search engines. Our services include keyword research, on-page & off-page SEO, content marketing, and PPC campaigns. We ensure that your website is optimized for maximum visibility and lead generation.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll(".faq-toggle").forEach(button => {
+            button.addEventListener("click", () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector("span");
+
+                if (answer.classList.contains("hidden")) {
+                    answer.classList.remove("hidden");
+                    icon.textContent = "-";
+                } else {
+                    answer.classList.add("hidden");
+                    icon.textContent = "+";
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
