@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <title>Home Page</title>
 </head>
 <style>
@@ -27,7 +29,8 @@
           <!-- Navigation Menu -->
           <nav class="hidden md:flex space-x-6 text-gray-700 text-base">
             <a href="home.html" class="hover:text-blue-500">Home</a>
-              <a href="Services.html" class="hover:text-blue-500">Services</a>
+              <a href="#services" class="hover:text-blue-500">Services</a>
+              <a href="#aboutus" class="hover:text-blue-500">About us</a>
               <a href="testimonials.html" class="hover:text-blue-500">Review</a>
               <a href="contect.html" class="hover:text-blue-500">Contact</a>
           </nav>
@@ -61,118 +64,213 @@
       </div>
   </section>
   
-  
+  <section class="container mx-auto px-6 py-12 text-center">
+    <h2 class="text-3xl font-bold text-black">Our Completed Projects - Best Website Developers with Exclusive Designs</h2>
+    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+        Know Flown Developer from our valuable customers’ past web designing and development experience. Our work ethic makes us one of India’s best web design companies. Flown Developer forms a major part of the list of the top design services.
+    </p>
 
-<section id="blog" class="py-20 bg-gray-200 text-center">
-  <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-gray-900 mb-6">Latest Blog Posts</h2>
-      <p class="text-gray-700 mb-12">Stay updated with our latest insights</p>
-      <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-              <img src="../assets/istockphoto-1867090031-612x612.jpg" alt="Blog 1" class="w-full h-48 object-cover rounded-lg">
-              <h3 class="text-xl font-semibold mt-4">How to Build a Great Website</h3>
-              <p class="text-gray-600 mt-2">Learn the essentials of designing a great website.</p>
-              <a href="#" class="text-blue-500 mt-4 inline-block">Read More</a>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-              <img src="../assets/YouTube-SEO-1.jpg" alt="Blog 2" class="w-full h-48 object-cover rounded-lg">
-              <h3 class="text-xl font-semibold mt-4">SEO Tips for Your Business</h3>
-              <p class="text-gray-600 mt-2">Boost your website traffic with these SEO tips.</p>
-              <a href="#" class="text-blue-500 mt-4 inline-block">Read More</a>
-          </div>
-          <div class="bg-white p-6 rounded-lg shadow-lg">
-              <img src="../assets/mobile-optimization-wordpress_71602f3.webp" alt="Blog 3" class="w-full h-48 object-cover rounded-lg">
-              <h3 class="text-xl font-semibold mt-4">Why Mobile Optimization is Key</h3>
-              <p class="text-gray-600 mt-2">Ensure your site is optimized for all devices.</p>
-              <a href="#" class="text-blue-500 mt-4 inline-block">Read More</a>
-          </div>
+    <!-- Swiper Slider -->
+    <div class="swiper mySwiper mt-10">
+        <div class="swiper-wrapper flex">
+            
+            <!-- Project 1 -->
+            <div class="swiper-slide flex justify-center w-1/5">
+                <div class="shadow-lg p-4 rounded-lg">
+                    <img src="../assets/responsive-screens.webp" alt="Project 1" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-xl font-semibold mt-4">Cure Souls</h3>
+                    <p class="text-gray-500 text-sm">E-Commerce Website</p>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="swiper-slide flex justify-center w-1/5">
+                <div class="shadow-lg p-4 rounded-lg">
+                    <img src="../assets/image10.png" alt="Project 2" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-xl font-semibold mt-4">Activism Foundation</h3>
+                    <p class="text-gray-500 text-sm">Business Website</p>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="swiper-slide flex justify-center w-1/5">
+                <div class="shadow-lg p-4 rounded-lg">
+                    <img src="../assets/660d2f5487880c4b5e089b0f_G38U5GV5yicM8HktqXiySbP5a9DEGO0moWpGa3ku1A4l1SGL5Bi_WdiyWb4g9B9uJ8mnVA2VamKIX17mj6XtYKtBGKSexvbc49_eT_1vRNLgDjmvUDlgOxohN6F79HK1v0jsMzWFOB-zfcQpyacnDaQ.jpeg" alt="Project 3" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-xl font-semibold mt-4">King Leao Tattooz</h3>
+                    <p class="text-gray-500 text-sm">Business Website</p>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="swiper-slide flex justify-center w-1/5">
+                <div class="shadow-lg p-4 rounded-lg">
+                    <img src="../assets/Competitive-Computing.jpg" alt="Project 4" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-xl font-semibold mt-4">Tech Solutions</h3>
+                    <p class="text-gray-500 text-sm">Software Company</p>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="swiper-slide flex justify-center w-1/5">
+                <div class="shadow-lg p-4 rounded-lg">
+                    <img src="../assets/images.jpg" alt="Project 5" class="w-full h-64 object-cover rounded-lg">
+                    <h3 class="text-xl font-semibold mt-4">Design Studio</h3>
+                    <p class="text-gray-500 text-sm">Creative Agency</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+</section>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 5,  // एक लाइन में 5 प्रोजेक्ट्स दिखाने के लिए
+        spaceBetween: 20,  // प्रोजेक्ट्स के बीच में स्पेस
+        loop: true,
+        autoplay: { delay: 3000, disableOnInteraction: false },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+        breakpoints: {
+            1024: { slidesPerView: 4 }, // बड़ी स्क्रीन पर 4 प्रोजेक्ट्स दिखेंगे
+            768: { slidesPerView: 3 }, // टैबलेट पर 3 दिखेगा
+            480: { slidesPerView: 2 }, // मोबाइल पर 2 दिखेगा
+            320: { slidesPerView: 1 }  // छोटे मोबाइल पर 1 दिखेगा
+        }
+    });
+</script>
+
+
+<div class="bg-white" id="aboutus">
+<section class="container mx-auto px-6 py-12 flex flex-col md:flex-row items-center">
+  <div class="md:w-1/2">
+      <img src="../assets/5569517_2889111.svg" alt="Web Development" class="w-full h-auto">
+  </div>
+  <div class="md:w-1/2 md:pl-10">
+      <h3 class="text-gray-700 font-semibold text-lg">Define us!</h3>
+      <h1 class="text-3xl md:text-4xl font-bold text-black mt-2">
+          Welcome to Flown Developer -<br> 
+          A Top Web Development<br> 
+          Company in India
+      </h1>
+      <p class="text-gray-600 mt-4">
+          100% Trusted and Registered Company in India with a professional website that provides 
+          the best web development and web design services in India. We are a company that offers 
+          multi-functional web portals, and we make sure that a well-developed and attractive website 
+          can help our clients to record ROI-driven results.
+      </p>
+      <a href="https://wa.me/8817156755" class="mt-6 inline-block bg-gray-200 text-black px-6 py-3 font-semibold rounded-lg">
+          Contect us!
+      </a>
+  </div>
+</section>
+</div>
+  
+<section class="container mx-auto px-6 py-12 text-center" id="services">
+  <h2 class="text-3xl font-bold text-black">Our Services</h2>
+  <p class="text-gray-600 mt-4">
+      We are a One-Stop Solution for delivering the best web design and development services. 
+      We render customized and affordable web design facilities to suit your requirements. 
+      Choose the best plans for building a responsive web design according to your needs.
+  </p>
+
+<!-- services -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-10" >
+      <!-- Service Card 1 -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+        <img src="../assets/360_F_911182810_pTLUkLzuaLJ9DuyFF1LEzavTkqDT5GNe.webp" alt="Web Design" class="mx-auto w-24 h-24">
+
+          <h3 class="text-xl font-semibold mt-4">Web Design</h3>
+      </div>
+
+      <!-- Service Card 2 -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="../assets/360_F_158216984_zSFxdd273rSrPmwnsK1mwukR5c2N0zWq.webp" alt="24*7 Support" class="mx-auto w-24 h-24">
+          <h3 class="text-xl font-semibold mt-4">24*7 Free Support</h3>
+          <p class="text-gray-500 text-sm">(Phone/Chat/Email)</p>
+      </div>
+
+      <!-- Service Card 3 -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="../assets/2210153.webp" alt="Web Development" class="mx-auto w-24 h-24">
+          <h3 class="text-xl font-semibold mt-4">Web Development</h3>
+      </div>
+
+      <!-- Service Card 4 -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="../assets/responsive-design-icon-512x512-ufpge4g9.webp" alt="Responsive Websites" class="mx-auto w-24 h-24">
+          <h3 class="text-xl font-semibold mt-4">100% Responsive Websites</h3>
+      </div>
+
+      <!-- Service Card 5 -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="../assets/360_F_1072571647_nETTdS4CkN6Wjt08wEhaGWq6oxAYeAtU.webp" alt="Content Writing" class="mx-auto w-24 h-24">
+          <h3 class="text-xl font-semibold mt-4">Content Writing</h3>
+      </div>
+
+      <!-- Service Card 6 -->
+      <div class="bg-white shadow-lg rounded-lg p-6">
+          <img src="../assets/f2852492342240408721eadc651388a5.webp" alt="Logo Designs" class="mx-auto w-24 h-24">
+          <h3 class="text-xl font-semibold mt-4">Logo Designs</h3>
       </div>
   </div>
 </section>
 
-<section id="gallery" class="py-20 bg-gray-300 text-center">
-  <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-gray-900 mb-6">Our Portfolio</h2>
-      <p class="text-gray-700 mb-12">Take a look at some of our amazing work</p>
-      <div class="grid md:grid-cols-3 gap-8">
-          <img src="../assets/hqdefault.jpg" alt="Project 1" class="w-full h-64 object-cover rounded-lg shadow-lg">
-          <img src="../assets/is_web_development_good_career.avif" alt="Project 2" class="w-full h-64 object-cover rounded-lg shadow-lg">
-          <img src="../assets/mobile-application-development-guidelines-riseuplabs.webp" alt="Project 3" class="w-full h-64 object-cover rounded-lg shadow-lg">
-      </div>
-  </div>
-</section>
+</body>
 
-<section id="about-us" class="py-20 bg-gray-400 text-center">
-  <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-gray-900 mb-6">About Us</h2>
-      <p class="text-gray-700 mb-12">Learn more about our journey and expertise</p>
-      <div class="flex flex-col md:flex-row items-center justify-center">
-          <div class="md:w-1/2 p-6">
-              <img src="https://piogroup.net/media/cache/image_jpeg/uploads/faq/d48a7938-2-1-6511e5ee80ff6573511002.jpg" alt="Our Team" class="w-full h-auto rounded-lg shadow-lg">
-          </div>
-          <div class="md:w-1/2 p-6 text-left">
-              <p class="text-lg text-gray-800 leading-relaxed">**About Our Team – Passionate Software Developers**  
-
-                At **[Your Company Name]**, we are a team of dedicated and highly skilled **software developers**, committed to delivering **innovative and high-quality solutions**. With expertise in **web development, mobile app development, AI/ML projects, and custom software solutions**, we transform ideas into reality.  
-                
-                Our developers stay up-to-date with the latest technologies to build **fast, secure, and scalable** applications. We believe in **collaboration, creativity, and problem-solving**, ensuring that every project we work on exceeds expectations.  
-                
-                From **startups to enterprises**, we provide tailor-made solutions that help businesses **grow and succeed in the digital world**. Whether it's a website, a web app, a mobile app, or an AI-driven system, our team is here to **bring your vision to life**.  
-                
-                🚀 **Let’s build something amazing together!**</p>
-              <button class="mt-6 bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600"><a href="contect.html">Contact Us</a></button>
-          </div>
-      </div>
-  </div>
-</section>
-  
-  
     <!--Content-->
   
-    <section class="text-gray-600 body-font bg-gray-100">
-      <div class="container px-5 py-24 mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-semibold text-gray-900">Why Choose Us?</h2>
-          <p class="mt-4 text-lg text-gray-600">We offer top-notch web and mobile solutions for your business success.</p>
-        </div>
-        <div class="flex flex-wrap -m-4">
-          <div class="p-4 md:w-1/3">
-            <div class="h-full bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-              <div class="w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                <svg fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                  <path d="M9 11l3 3L22 4M9 21V11H2l7-7 7 7h-7z"></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900">Expert Team</h3>
-              <p class="mt-2 text-gray-600">Our skilled developers and designers deliver high-quality digital solutions.</p>
-            </div>
+    <section class="container mx-auto px-6 py-12 text-center">
+      <h3 class="text-lg font-semibold text-gray-500">Why Choose Us?</h3>
+      <h2 class="text-3xl font-bold text-black mt-2">The Top Web Design Developers in India!</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+          
+          <!-- Card 1 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+              <img src="../assets/pngtree-web-hosting-server-icon-png-image_8741923.png" alt="Hosting" class="w-24 h-24">
+              <h3 class="text-xl font-semibold mt-4">1 Year Free Domain/Hosting</h3>
           </div>
-          <div class="p-4 md:w-1/3">
-            <div class="h-full bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-              <div class="w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                <svg fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                  <path d="M12 8v4l3 3m9 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900">On-Time Delivery</h3>
-              <p class="mt-2 text-gray-600">We ensure timely project completion with no compromise on quality.</p>
-            </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+              <img src="../assets/4152788.png" alt="Web Design" class="w-24 h-24">
+              <h3 class="text-xl font-semibold mt-4">Dynamic Websites with Attractive Designs</h3>
           </div>
-          <div class="p-4 md:w-1/3">
-            <div class="h-full bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
-              <div class="w-16 h-16 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                <svg fill="none" stroke="currentColor" stroke-width="2" class="w-10 h-10" viewBox="0 0 24 24">
-                  <path d="M5 13l4 4L19 7"></path>
-                </svg>
-              </div>
-              <h3 class="text-xl font-semibold text-gray-900">Client Satisfaction</h3>
-              <p class="mt-2 text-gray-600">Customer-centric approach ensuring 100% satisfaction and support.</p>
-            </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+              <img src="../assets/3588395.png" alt="Pricing" class="w-24 h-24">
+              <h3 class="text-xl font-semibold mt-4">Affordable Plans</h3>
+              <p class="text-gray-500 text-sm mt-2">(18% GST Applicable)</p>
           </div>
-        </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+              <img src="../assets/3143267.png" alt="On-time Delivery" class="w-24 h-24">
+              <h3 class="text-xl font-semibold mt-4">On-time Project Delivery with Analysis</h3>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+              <img src="../assets/png-clipart-blue-medal-icon-quality-control-computer-icons-quality-assurance-quality-management-flippers-miscellaneous-service-thumbnail.png" alt="Quality" class="w-24 h-24">
+              <h3 class="text-xl font-semibold mt-4">High-End Services with Premium Quality</h3>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center">
+              <img src="../assets/1000_F_440283884_pBGElh5edGCi6Bmlg5ZdtrAfGvvHJMSy.jpg" alt="Support" class="w-24 h-24">
+              <h3 class="text-xl font-semibold mt-4">24/7 Hours Call Support</h3>
+          </div>
+
       </div>
-    </section>
-    
+  </section>
     <!--Step-->
     <section class="text-gray-600 body-font">
       <div class="container px-5 py-24 mx-auto flex flex-wrap">
