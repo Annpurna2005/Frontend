@@ -7,6 +7,19 @@
     <script defer src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let password = "admin123";
+    let userInput = prompt("🔐 Enter Password to Access Admin Panel:");
+
+    if (userInput === password) {
+        document.getElementById("adminPanel").style.display = "block";
+    } else {
+        alert("❌ Incorrect Password! Access Denied.");
+        document.body.innerHTML = ""; 
+    }
+});
+</script>
 <body class="bg-gray-100 p-6">
     <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-md">
         <h2 class="text-2xl font-bold mb-4">Contacts</h2>
